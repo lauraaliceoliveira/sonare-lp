@@ -16,6 +16,15 @@ import {
   ExternalLink,
 } from "lucide-react";
 
+import logo from './assets/logo.svg';
+import heroVideo from './assets/hero_video.mp4';
+import img1 from './assets/1.jpg';
+import img2 from './assets/2.jpg';
+import img3 from './assets/3.jpg';
+import img4 from './assets/4.jpg';
+import img5 from './assets/5.jpg';
+import img6 from './assets/6.jpg';
+
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
@@ -87,7 +96,7 @@ function App() {
     {
       id: 1,
       title: "Piano Clássico",
-      src: "/src/assets/1.jpg",
+      src: img1,
       gradient: "from-red-800 to-black",
       features: [
         "• Formação em conservatório",
@@ -99,7 +108,7 @@ function App() {
     {
       id: 2,
       title: "Violão & Guitarra",
-      src: "/src/assets/2.jpg",
+      src: img2,
       gradient: "from-red-900 to-red-800",
       features: [
         "• Especialista em diversos estilos",
@@ -111,7 +120,7 @@ function App() {
     {
       id: 3,
       title: "Canto & Técnica Vocal",
-      src: "/src/assets/3.jpg",
+      src: img3,
       gradient: "from-gray-700 to-black",
       features: [
         "• Técnica vocal avançada",
@@ -123,7 +132,7 @@ function App() {
     {
       id: 4,
       title: "Bateria & Percussão",
-      src: "/src/assets/4.jpg",
+      src: img4,
       gradient: "from-red-700 to-gray-800",
       features: [
         "• Técnicas avançadas de bateria",
@@ -135,7 +144,7 @@ function App() {
     {
       id: 5,
       title: "Violino & Viola",
-      src: "/src/assets/5.jpg",
+      src: img5,
       gradient: "from-gray-800 to-red-900",
       features: [
         "• Técnica clássica refinada",
@@ -147,7 +156,7 @@ function App() {
     {
       id: 6,
       title: "Baixo Elétrico",
-      src: "/src/assets/6.jpg",
+      src: img6,
       gradient: "from-black to-red-800",
       features: [
         "• Fundamentos do baixo",
@@ -191,7 +200,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
-              <img src="/src/assets/logo.svg" alt="" />
+              <img src={logo} alt="" />
               <span className="text-xl font-semibold text-gray-900">
                 Sonare
               </span>
@@ -263,7 +272,7 @@ function App() {
           className="absolute top-0 left-0 w-full h-full object-cover"
         >
           <source
-            src="/src/assets/hero_video.mp4"
+            src={heroVideo}
             type="video/mp4"
           />
           Your browser does not support the video tag.
